@@ -44,7 +44,7 @@ def max_indeg():
 		attendance[hackathon] = (sum(hackathons[hackathon].itervalues()))
 	return max(attendance)
 
-with open ("mlh.csv", "rb") as mlhfile:
+with open ("../data/mlh.csv", "rb") as mlhfile:
 	mlhreader = csv.reader(mlhfile, quoting=csv.QUOTE_ALL)
 	for row in mlhreader:
 		if row[1] != "0":
