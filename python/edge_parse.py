@@ -16,7 +16,7 @@ def write_csv(outfile, src_school, data):
 		csvwriter = csv.writer(csvfile, quoting=csv.QUOTE_MINIMAL)
 		for key in data.keys():
 			if src_school not in [key]:
-				csvwriter.writerow([key, src_school])
+				csvwriter.writerow([key, src_school, data[key]])
 
 def list_schools():
 	return total.keys()
@@ -96,13 +96,12 @@ with open ("../data/mlh.csv", "rb") as mlhfile:
 				total[row[0]] += int(row[5])
 			else:
 				total[row[0]] = int(row[5])
-
 '''
-write_csv("pennapps.csv", "University of Pennsylvania", pennapps)
-write_csv("mhacks.csv", "University of Michigan", mhacks)
-write_csv("hackny.csv", "New York University", hackny)
-write_csv("hackmit.csv", "Massachusetts Institute of Technology", hackmit)
-write_csv("hackru.csv", "Rutgers, The State University of New Jersey", hackru)
+write_csv("../data/pennapps.csv", "University of Pennsylvania", pennapps)
+write_csv("../data/mhacks.csv", "University of Michigan", mhacks)
+write_csv("../data/hackny.csv", "New York University", hackny)
+write_csv("../data/hackmit.csv", "Massachusetts Institute of Technology", hackmit)
+write_csv("../data/hackru.csv", "Rutgers, The State University of New Jersey", hackru)
 '''
 
 '''
