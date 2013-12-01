@@ -1,0 +1,186 @@
+origin,destination,count
+Brown University,Massachusetts Institute of Technology,9
+University of North Carolina,Massachusetts Institute of Technology,3
+Purdue University,Massachusetts Institute of Technology,1
+Stanford University,Massachusetts Institute of Technology,2
+Universidad de Puerto Rico,Massachusetts Institute of Technology,1
+Concordia University,Massachusetts Institute of Technology,5
+Carnegie Mellon University,Massachusetts Institute of Technology,10
+University of Waterloo,Massachusetts Institute of Technology,2
+Lehigh University,Massachusetts Institute of Technology,1
+"University of California, San Diego",Massachusetts Institute of Technology,1
+Drexel University,Massachusetts Institute of Technology,2
+"University of California, Los Angeles",Massachusetts Institute of Technology,2
+University of Texas at Austin,Massachusetts Institute of Technology,2
+Rice University,Massachusetts Institute of Technology,3
+Millersville University,Massachusetts Institute of Technology,1
+Rensselaer Polytechnic Institute,Massachusetts Institute of Technology,9
+University of Helsinki,Massachusetts Institute of Technology,1
+Olin College,Massachusetts Institute of Technology,4
+University of Maryland,Massachusetts Institute of Technology,71
+"University of California, Davis",Massachusetts Institute of Technology,2
+Georgia Institute of Technology,Massachusetts Institute of Technology,4
+University of Southern California,Massachusetts Institute of Technology,2
+State University of New York at Buffalo,Massachusetts Institute of Technology,6
+University of Michigan,Massachusetts Institute of Technology,14
+University of Pennsylvania,Massachusetts Institute of Technology,1
+University of Miami,Massachusetts Institute of Technology,2
+"California State University, San Marcos",Massachusetts Institute of Technology,1
+Polytechnique Montreal,Massachusetts Institute of Technology,1
+University of Rochester,Massachusetts Institute of Technology,1
+California State Polytechnic University - Pomona,Massachusetts Institute of Technology,8
+Cornell University,Massachusetts Institute of Technology,3
+Amherst College,Massachusetts Institute of Technology,2
+Pennsylvania State University,Massachusetts Institute of Technology,1
+Harvard University,Massachusetts Institute of Technology,2
+Tufts University,Massachusetts Institute of Technology,1
+Worcester Polytechic Institute,Massachusetts Institute of Technology,6
+George Washington University,Massachusetts Institute of Technology,2
+Rochester Institute of Technology,Massachusetts Institute of Technology,1
+Princeton University,Massachusetts Institute of Technology,2
+McGill University,Massachusetts Institute of Technology,10
+SUNY Institute of Technology at Utica/Rome,Massachusetts Institute of Technology,1
+Boston University,Massachusetts Institute of Technology,5
+University of Wisconsin,Massachusetts Institute of Technology,2
+Michigan State University,Massachusetts Institute of Technology,1
+University of Cincinnati,Massachusetts Institute of Technology,5
+"Rutgers, The State University of New Jersey",Massachusetts Institute of Technology,16
+University of Toronto,Massachusetts Institute of Technology,2
+Hofstra University,Massachusetts Institute of Technology,1
+University of Illinois,Massachusetts Institute of Technology,3
+University of Arizona,Massachusetts Institute of Technology,1
+Massachusetts Institute of Technology,New York University,1
+Montclair State University,New York University,1
+Mercer County College,New York University,1
+"State University of New York, Stony Brook",New York University,1
+Carnegie Mellon University,New York University,9
+University of Maryland,New York University,4
+Juilliard School,New York University,1
+Montgomery College,New York University,1
+Columbia University,New York University,33
+University of Michigan,New York University,1
+University of Pennsylvania,New York University,3
+University of Rochester,New York University,1
+The College of New Jersey,New York University,3
+Tufts University,New York University,1
+Hofstra University,New York University,1
+Rochester Institute of Technology,New York University,1
+Temple University,New York University,1
+"Rutgers, The State University of New Jersey",New York University,27
+Northeastern University,New York University,1
+Cooper Union,New York University,1
+Worcester Polytechic Institute,New York University,1
+Fordham University,New York University,1
+University of Pennsylvania,"Rutgers, The State University of New Jersey",5
+Bergen Community College,"Rutgers, The State University of New Jersey",2
+Yeshiva University,"Rutgers, The State University of New Jersey",1
+Stanford University,"Rutgers, The State University of New Jersey",1
+University of Cincinnati,"Rutgers, The State University of New Jersey",1
+University of Virginia,"Rutgers, The State University of New Jersey",1
+The College of New Jersey,"Rutgers, The State University of New Jersey",10
+University of Maryland,"Rutgers, The State University of New Jersey",16
+Cooper Union,"Rutgers, The State University of New Jersey",5
+Worcester Polytechic Institute,"Rutgers, The State University of New Jersey",1
+William Paterson University,"Rutgers, The State University of New Jersey",2
+Shippensburg University,"Rutgers, The State University of New Jersey",1
+Princeton University,"Rutgers, The State University of New Jersey",1
+Columbia University,"Rutgers, The State University of New Jersey",4
+Michigan Technological University,University of Michigan,24
+Purdue University,University of Michigan,10
+"State University of New York, Stony Brook",University of Michigan,5
+Carnegie Mellon University,University of Michigan,2
+"University of California, Berkeley",University of Michigan,1
+Berea College,University of Michigan,1
+State University of New York at Binghamton,University of Michigan,5
+University of Maryland,University of Michigan,52
+Georgia Institute of Technology,University of Michigan,7
+University of Southern California,University of Michigan,1
+State University of New York at Buffalo,University of Michigan,3
+University of Pittsburgh,University of Michigan,1
+University of Pennsylvania,University of Michigan,3
+DePauw University,University of Michigan,2
+Pennsylvania State University,University of Michigan,1
+Illinois Institute of Technology,University of Michigan,2
+University of Virginia,University of Michigan,17
+Duke University,University of Michigan,2
+Kent State,University of Michigan,1
+Miami of Ohio,University of Michigan,2
+Rochester Institute of Technology,University of Michigan,2
+Case Western Reserve University,University of Michigan,10
+Grinnell College,University of Michigan,2
+Shippensburg University,University of Michigan,1
+Southern Methodist University,University of Michigan,2
+Iowa State University,University of Michigan,1
+Old Dominion University,University of Michigan,1
+University of Wisconsin,University of Michigan,4
+University of Cincinnati,University of Michigan,2
+"Rutgers, The State University of New Jersey",University of Michigan,17
+University of St. Jerome's College,University of Michigan,4
+Virginia Tech,University of Michigan,27
+University of Illinois,University of Michigan,12
+Illinois Math and Science Academy,University of Michigan,1
+University of Arizona,University of Michigan,1
+Brown University,University of Pennsylvania,8
+University of North Carolina,University of Pennsylvania,4
+Purdue University,University of Pennsylvania,3
+Massachusetts Institute of Technology,University of Pennsylvania,2
+Stanford University,University of Pennsylvania,7
+ETH Zurich,University of Pennsylvania,5
+University of Missouri,University of Pennsylvania,1
+"Rutgers, The State University of New Jersey",University of Pennsylvania,14
+Carnegie Mellon University,University of Pennsylvania,43
+University of Waterloo,University of Pennsylvania,5
+"University of California, Berkeley",University of Pennsylvania,12
+Ohio State University,University of Pennsylvania,1
+Lehigh University,University of Pennsylvania,2
+State University of New York at Binghamton,University of Pennsylvania,3
+Washington University in Saint Louis,University of Pennsylvania,2
+"University of California, Los Angeles",University of Pennsylvania,6
+University of Texas at Austin,University of Pennsylvania,5
+New York University,University of Pennsylvania,4
+"University of California, Irvine",University of Pennsylvania,1
+IDC Herzliya,University of Pennsylvania,3
+East Stroudsburg University,University of Pennsylvania,2
+North Carolina State University,University of Pennsylvania,1
+Olin College,University of Pennsylvania,1
+University of Maryland,University of Pennsylvania,17
+American University,University of Pennsylvania,3
+York University,University of Pennsylvania,1
+Swarthmore,University of Pennsylvania,1
+Georgia Institute of Technology,University of Pennsylvania,9
+University of Southern California,University of Pennsylvania,5
+State University of New York at Buffalo,University of Pennsylvania,3
+Columbia University,University of Pennsylvania,9
+University of Michigan,University of Pennsylvania,11
+Wellesley College,University of Pennsylvania,3
+Franklin and Marshall College,University of Pennsylvania,1
+University of Chicago,University of Pennsylvania,1
+College of William and Mary,University of Pennsylvania,7
+Cornell University,University of Pennsylvania,6
+The College of New Jersey,University of Pennsylvania,6
+University of Virginia,University of Pennsylvania,4
+National University of Singapore,University of Pennsylvania,1
+Duke University,University of Pennsylvania,5
+Tufts University,University of Pennsylvania,4
+Kent State,University of Pennsylvania,2
+Miami of Ohio,University of Pennsylvania,1
+Temple University,University of Pennsylvania,1
+Rochester Institute of Technology,University of Pennsylvania,1
+Notre Dame,University of Pennsylvania,1
+Princeton University,University of Pennsylvania,2
+Hong Kong University,University of Pennsylvania,1
+Pennsylvania State University,University of Pennsylvania,5
+Iowa State University,University of Pennsylvania,2
+Harvard University,University of Pennsylvania,2
+University of Wisconsin,University of Pennsylvania,5
+Rice University,University of Pennsylvania,2
+Johns Hopkins,University of Pennsylvania,3
+"State University of New York, Stony Brook",University of Pennsylvania,2
+University of St. Michael's College,University of Pennsylvania,1
+"University of Dublin, Trinity College",University of Pennsylvania,1
+University of Toronto,University of Pennsylvania,3
+Yale University,University of Pennsylvania,11
+Caltech,University of Pennsylvania,1
+Northeastern University,University of Pennsylvania,3
+University of Pittsburgh,University of Pennsylvania,1
+University of Illinois,University of Pennsylvania,12

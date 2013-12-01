@@ -31,7 +31,7 @@
       }
 
       #cells g path.arc {
-        stroke-width: 0.4;
+        stroke-width: 0.7;
       }
 
       #cells g:hover path.arc {
@@ -45,11 +45,11 @@
       <span>MLH Hackathons</span>, 2013<br>
       Major League Hacking
     </h2>
-    <!--<div style="position:absolute;bottom:0;font-size:18px;">-->
-      <!--<input type="checkbox" id="voronoi"> <label for="voronoi">Show Voronoi</label>-->
-    <!--</div>-->
+    <div style="position:absolute;bottom:10;font-size:18px;">
+      <input type="checkbox" id="voronoi"> <label for="voronoi">Show Voronoi</label>
+    </div>
     <div style="position:absolute;bottom:0;font-size:18px;">
-      <input type="checkbox" id="showalledges"> <label for="showalledges">Hide/Show All Edges</label>
+      <input type="checkbox" id="hidealledges"> <label for="hidealledges">Hide All Edges</label>
     </div>
     <script type="text/javascript" src="d3/d3.js"></script>
     <script type="text/javascript" src="d3/d3.csv.js"></script>
@@ -95,7 +95,7 @@ var toggleEdges = (function() {
   }
 })();
 
-d3.select("#showalledges").on("change", toggleEdges);
+d3.select("#hidealledges").on("change", toggleEdges);
 
 d3.json("data/us-states.json", function(collection) {
   states.selectAll("path")
@@ -104,7 +104,7 @@ d3.json("data/us-states.json", function(collection) {
       .attr("d", path);
 });
 
-d3.csv("data/pennapps.csv", function(flights) {
+d3.csv("data/allhackathons.csv", function(flights) {
   var linksByOrigin = {},
       countByAirport = {},
       locationByAirport = {},
@@ -123,10 +123,7 @@ d3.csv("data/pennapps.csv", function(flights) {
     countByAirport[destination] = (countByAirport[destination] || 0) + 1;
   });
 
-
   d3.csv("data/universities.csv", function(airports) {
-    //console.log(airports);
-
     // Only consider airports with at least one flight.
     airports = airports.filter(function(airport) {
       if (countByAirport[airport.name]) {
@@ -137,6 +134,7 @@ d3.csv("data/pennapps.csv", function(flights) {
       }
     });
 
+    console.log(positions);
     // Compute the Voronoi diagram of airports' projected positions.
     var polygons = d3.geom.voronoi(positions);
 
@@ -149,8 +147,6 @@ d3.csv("data/pennapps.csv", function(flights) {
         .attr("d", function(d, i) { return "M" + polygons[i].join("L") + "Z"; })
         .on("mouseover", function(d, i) { d3.select("h2 span").text(d.name); });
 
-    //console.log(linksByOrigin);
-
     g.selectAll("path.arc")
         .data(function(d) { return linksByOrigin[d.name] || []; })
       .enter().append("svg:path")
@@ -162,9 +158,13 @@ d3.csv("data/pennapps.csv", function(flights) {
       .enter().append("svg:circle")
         .attr("cx", function(d, i) { return positions[i][0]; })
         .attr("cy", function(d, i) { return positions[i][1]; })
-        .attr("r", 5)//function(d, i) { return Math.sqrt(countByAirport[d.name]); })
+        .attr("r", function(d, i) { return 3*Math.sqrt(countByAirport[d.name]); })
         // smallest circles on top
         .sort(function(a, b) { return countByAirport[b.name] - countByAirport[a.name]; });
+
+    d3.selectAll("circle")
+      .attr("z-index", function(d, i) { console.log(d); return 100;})
+      .on("mouseover", function(d, i) { console.log(d);});
   });
 });
 
