@@ -1,6 +1,7 @@
 import csv, networkx
 import matplotlib.pyplot as plt
 
+g = networkx.MultiGraph()
 pennapps = {}
 mhacks= {}
 hackmit= {}
@@ -9,24 +10,12 @@ hackru = {}
 hackathons = {"University of Pennsylvania": pennapps, "University of Michigan": mhacks, "New York University": hackny, "Massachusetts Institute of Technology": hackmit, "Rutgers, The State University of New Jersey": hackru}
 total = {}
 
-edges = []
-
-
-subgraphs = [pennapps, mhacks, hackmit, hackny, hackru]
-
-def write_csv(outfile, src_school, data):
-	with open(outfile, "wb") as csvfile:
-		csvwriter = csv.writer(csvfile, quoting=csv.QUOTE_MINIMAL)
-		for key in data.keys():
-			if src_school not in [key]:
-				csvwriter.writerow([key, src_school, data[key]])
-
 def list_schools():
 	return total.keys()
 
 def outdeg(school):
 	total = 0
-	for data in subgraphs:
+	for data in hackathons.itervalues():
 		if school in data:
 			total += data[school]
 	return total
@@ -47,6 +36,7 @@ def max_indeg():
 		attendance[hackathon] = (sum(hackathons[hackathon].itervalues()))
 	return max(attendance)
 
+# Import MLH Data from CSV File
 with open ("../data/mlh.csv", "rb") as mlhfile:
 	mlhreader = csv.reader(mlhfile, quoting=csv.QUOTE_ALL)
 	for row in mlhreader:
@@ -100,26 +90,7 @@ with open ("../data/mlh.csv", "rb") as mlhfile:
 			else:
 				total[row[0]] = int(row[5])
 
-'''
-write_csv("../data/pennapps.csv", "University of Pennsylvania", pennapps)
-write_csv("../data/mhacks.csv", "University of Michigan", mhacks)
-write_csv("../data/hackny.csv", "New York University", hackny)
-write_csv("../data/hackmit.csv", "Massachusetts Institute of Technology", hackmit)
-write_csv("../data/hackru.csv", "Rutgers, The State University of New Jersey", hackru)
-'''
-
-'''
-Highest indeg, highest outdeg
-Strongly connected components
-'''
-if __name__ == "__main__":
-	g = networkx.MultiGraph()
-	for src_school in hackathons:
-		for school in hackathons[src_school]:
-			g.add_edge(school, src_school, weight=1)
-	cliques = sorted(list(networkx.find_cliques(g)), key=len, reverse=True)
-	for i in range(10):
-		plt.figure(i)
-		networkx.draw(g.subgraph(cliques[i]))
-		print cliques[i]
-	plt.show()
+# Add all schools to graph
+for src_school in hackathons:
+	for school in hackathons[src_school]:
+		g.add_edge(school, src_school, weight=hackathons[src_school][school])
