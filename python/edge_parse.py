@@ -1,4 +1,5 @@
-import csv
+import csv, networkx
+import matplotlib.pyplot as plt
 
 pennapps = {}
 mhacks= {}
@@ -7,6 +8,8 @@ hackny = {}
 hackru = {}
 hackathons = {"University of Pennsylvania": pennapps, "University of Michigan": mhacks, "New York University": hackny, "Massachusetts Institute of Technology": hackmit, "Rutgers, The State University of New Jersey": hackru}
 total = {}
+
+edges = []
 
 
 subgraphs = [pennapps, mhacks, hackmit, hackny, hackru]
@@ -96,6 +99,7 @@ with open ("../data/mlh.csv", "rb") as mlhfile:
 				total[row[0]] += int(row[5])
 			else:
 				total[row[0]] = int(row[5])
+
 '''
 write_csv("../data/pennapps.csv", "University of Pennsylvania", pennapps)
 write_csv("../data/mhacks.csv", "University of Michigan", mhacks)
@@ -109,9 +113,13 @@ Highest indeg, highest outdeg
 Strongly connected components
 '''
 if __name__ == "__main__":
-	#print total
-	print outdeg("Massachusetts Institute of Technology")
-	print indeg("Massachusetts Institute of Technology")
-	print max_outdeg()
-	print max_indeg()
-	print list_schools()
+	g = networkx.MultiGraph()
+	for src_school in hackathons:
+		for school in hackathons[src_school]:
+			g.add_edge(school, src_school, weight=1)
+	cliques = sorted(list(networkx.find_cliques(g)), key=len, reverse=True)
+	for i in range(10):
+		plt.figure(i)
+		networkx.draw(g.subgraph(cliques[i]))
+		print cliques[i]
+	plt.show()
