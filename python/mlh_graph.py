@@ -1,7 +1,7 @@
 import csv, networkx
 import matplotlib.pyplot as plt
 
-g = networkx.MultiGraph()
+g = networkx.MultiDiGraph()
 pennapps = {}
 mhacks= {}
 hackmit= {}

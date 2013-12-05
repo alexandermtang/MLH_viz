@@ -1,6 +1,6 @@
 import mlh_graph, matplotlib.pyplot as plt, networkx as nx, csv
 
-g = mlh_graph.g
+g = nx.MultiGraph(mlh_graph.g)
 cliques = sorted(list(nx.find_cliques(g)), key=len, reverse=True)
 plt.figure(0)
 nx.draw(g)
@@ -14,7 +14,7 @@ for i in range(0):
 
 community = list(nx.k_clique_communities(g, 5, cliques=nx.find_cliques(g)))[0]
 plt.figure()
-h = g.subgraph(community)
+h = mlh_graph.g.subgraph(community)
 pos = nx.circular_layout(h)
 nx.draw(h, pos)
 edge_labels=dict([((u,v,),d['weight']) for u,v,d in h.edges(data=True)])
@@ -22,7 +22,7 @@ edge_labels=dict([((u,v,),d['weight']) for u,v,d in h.edges(data=True)])
 
 
 for edge in h.edges(data=True):
-	print edge[1] + "," + edge[0] + "," + str(edge[2]["weight"])
+	print edge[0] + "," + edge[1] + "," + str(edge[2]["weight"])
 
 
 plt.show()
