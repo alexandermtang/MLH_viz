@@ -73,6 +73,18 @@ var svg = d3.select("body").insert("svg:svg", "h2")
     .attr("width", w)
     .attr("height", h);
 
+// Per-type markers, as they don't inherit styles.
+svg.append("svg:defs")
+  .append("svg:marker")
+    .attr("id", "triangle")
+    .attr("viewBox", "0 -5 10 10")
+    .attr("refX", 5)
+    .attr("markerWidth", 9)
+    .attr("markerHeight", 9)
+    .attr("orient", "auto")
+  .append("svg:path")
+    .attr("d", "M0,-5L10,0L0,5");
+
 var states = svg.append("svg:g")
     .attr("id", "states");
 
@@ -151,7 +163,8 @@ d3.csv("data/allhackathons.csv", function(flights) {
         .data(function(d) { return linksByOrigin[d.name] || []; })
       .enter().append("svg:path")
         .attr("class", "arc")
-        .attr("d", function(d) { return path(arc(d)); });
+        .attr("d", function(d) { return path(arc(d)); })
+        .attr("marker-end", function(d) { return "url(#triangle)"; });
 
     circles.selectAll("circle")
         .data(airports)
