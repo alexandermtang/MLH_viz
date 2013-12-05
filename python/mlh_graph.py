@@ -10,7 +10,7 @@ hackru = {}
 hackathons = {"University of Pennsylvania": pennapps, "University of Michigan": mhacks, "New York University": hackny, "Massachusetts Institute of Technology": hackmit, "Rutgers, The State University of New Jersey": hackru}
 total = {}
 
-def list_schools():
+def schools():
 	return total.keys()
 
 def outdeg(school):
