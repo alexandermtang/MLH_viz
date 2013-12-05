@@ -22,5 +22,7 @@ d3 Visualization Usage:
 `python -m SimpleHTTPServer 8000`
 
 Open in browser:
+
 `localhost:8000/mlh_viz_us.html`
+
 `localhost:8000/clique_communities.html`
