@@ -51,7 +51,7 @@
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
 
-\title{\vspace{-25mm}\fontsize{24pt}{10pt}\selectfont\textbf{Major League Hacking Graph Visualization}} % Article title
+\title{\vspace{-25mm}\fontsize{24pt}{10pt}\selectfont\textbf{Major League Hacking: Hackathon Communities}} % Article title
 
 \date{December 2013}
 
@@ -106,7 +106,7 @@
 Major League Hacking (MLH) refers to the series of hackathons, which are events where
 software engineers and computer scientists collaborate and compete with other groups. 
 Hackathons are held worldwide, and many of them at well-known universities. By looking 
-at hackathon attendance we are able to create a weighted directed graph showing the 
+at hackathon attendance we are able to create a weighted directed multigraph showing the 
 activity of each school. The data provided, while small, can be used to show how 
 often schools interact with each other in the hacking	community and the optimal 
 locations for new hackathons to promote the growth of the MLH scene.
@@ -131,6 +131,22 @@ held at another school. Since there was only data for five hackathons available
 %\item Donec dolor arcu, rutrum id molestie in, viverra sed diam
 %\end{compactitem}
 
+%------------------------------------------------
+
+\section{Implementation}
+A python module was made using CSV data from MLH and several external Python 
+libraries:
+\begin{compactitem}
+\item NetworkX: A graph manipulation library
+\item matplotlib: A graph visualization library\\
+\end{compactitem}
+
+A map based graph visualization was made by using D3.js and parsed csv data.\\\\
+
+Users can view different properties of the graph by using the functions and dictionaries
+provided in mlh_graph. Once mlh_graph.py parses the graph from the csv file, you can 
+then use NetworkX to write your own scripts to manipulate the graph. See draw_cliques.py
+for an example.
 %------------------------------------------------
 
 \section{Algoithms and Complexity}
@@ -161,7 +177,6 @@ of cliques, or adjacent cliques of size > k vertices that share k-1 vertices.
 %------------------------------------------------
 
 \section{Results}
-
 The University of Maryland was found to have the highest out-degree, and thus
 the highest overall attendance and presence in the observed MLH community. This
 suggests that since the university did not yet host a hackathon, they would be
