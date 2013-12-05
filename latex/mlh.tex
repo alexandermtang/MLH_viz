@@ -127,6 +127,12 @@ held at another school. Since there was only data for five hackathons available
 \includegraphics[width=\linewidth, trim = 1cm 1cm 1cm 1cm, clip]{mlh_graph.png}
 \end{figure}
 
+\begin{figure}[H]
+\caption{MLH Graph with Geolocation Data}
+\centering
+\includegraphics[width=\linewidth, trim = 1cm 1cm 1cm 1cm, clip]{mlh_geo.jpg}
+\end{figure}
+
 %\begin{compactitem}
 %\item Donec dolor arcu, rutrum id molestie in, viverra sed diam
 %\end{compactitem}
@@ -149,7 +155,7 @@ then use NetworkX to write your own scripts to manipulate the graph. See draw\_c
 for an example.
 %------------------------------------------------
 
-\section{Algoithms and Complexity}
+\section{Algorithms and Complexity}
 
 \subsection{Max Outdegree}
 This routine simply iterates through the list of nodes in the graph once and 
@@ -166,7 +172,8 @@ NP Complete.
 
 \subsection{k-clique Communities}
 Also known as the Clique Percolation Method, this algorithm finds "communities"
-of cliques, or adjacent cliques of size > k vertices that share k-1 vertices.
+of cliques, or adjacent cliques of size > k vertices that share k-1 vertices. This
+is a linear transformation from the clique problem, so therefore it is also NP Complete.
 
 \begin{figure}[H]
 \caption{Example k-clique community}
@@ -196,6 +203,12 @@ hosted the hackathon. \\\\
 \caption{MLH 5-clique Community}
 \centering
 \includegraphics[width=\linewidth, trim = 1cm 1cm 1cm 1cm, clip]{mlh_community.png}
+\end{figure}
+
+\begin{figure}[H]
+\caption{MLH 5-clique Community with Geolocation Data}
+\centering
+\includegraphics[width=\linewidth, trim = 1cm 1cm 1cm 1cm, clip]{community_geo.jpg}
 \end{figure}
 
 By analyzing the data provided from the five hackathons, it was found that the 
