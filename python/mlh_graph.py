@@ -36,6 +36,9 @@ def max_indeg():
 		attendance[hackathon] = (sum(hackathons[hackathon].itervalues()))
 	return max(attendance)
 
+def avg_deg():
+	return sum(total.itervalues())/float(len(total))
+
 # Import MLH Data from CSV File
 with open ("../data/mlh.csv", "rb") as mlhfile:
 	mlhreader = csv.reader(mlhfile, quoting=csv.QUOTE_ALL)
