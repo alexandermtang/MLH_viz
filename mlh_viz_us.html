@@ -42,12 +42,12 @@
   </head>
   <body>
     <h2>
-      <span>MLH Hackathons</span>, 2013<br>
-      Major League Hacking
+      <span>MLH Hackathons</span><br>
+      Major League Hacking 2013
     </h2>
-    <div style="position:absolute;bottom:10;font-size:18px;">
-      <input type="checkbox" id="voronoi"> <label for="voronoi">Show Voronoi</label>
-    </div>
+    <!--<div style="position:absolute;bottom:10;font-size:18px;">-->
+      <!--<input type="checkbox" id="voronoi"> <label for="voronoi">Show Voronoi</label>-->
+    <!--</div>-->
     <div style="position:absolute;bottom:0;font-size:18px;">
       <input type="checkbox" id="hidealledges"> <label for="hidealledges">Hide All Edges</label>
     </div>
@@ -119,8 +119,9 @@ d3.csv("data/allhackathons.csv", function(flights) {
         destination = flight.destination,
         links = linksByOrigin[origin] || (linksByOrigin[origin] = []);
     links.push({source: origin, target: destination});
-    countByAirport[origin] = (countByAirport[origin] || 0) + 1;
-    countByAirport[destination] = (countByAirport[destination] || 0) + 1;
+    //countByAirport[origin] = (countByAirport[origin] || 0) + 1;
+    //countByAirport[destination] = (countByAirport[destination] || 0) + 1;
+    countByAirport[origin] = (countByAirport[origin] || 0) + +flight.count;
   });
 
   d3.csv("data/universities.csv", function(airports) {
@@ -134,7 +135,6 @@ d3.csv("data/allhackathons.csv", function(flights) {
       }
     });
 
-    console.log(positions);
     // Compute the Voronoi diagram of airports' projected positions.
     var polygons = d3.geom.voronoi(positions);
 
@@ -158,13 +158,9 @@ d3.csv("data/allhackathons.csv", function(flights) {
       .enter().append("svg:circle")
         .attr("cx", function(d, i) { return positions[i][0]; })
         .attr("cy", function(d, i) { return positions[i][1]; })
-        .attr("r", function(d, i) { return 3*Math.sqrt(countByAirport[d.name]); })
+        .attr("r", function(d, i) { return 2*Math.sqrt(countByAirport[d.name]); })
         // smallest circles on top
         .sort(function(a, b) { return countByAirport[b.name] - countByAirport[a.name]; });
-
-    d3.selectAll("circle")
-      .attr("z-index", function(d, i) { console.log(d); return 100;})
-      .on("mouseover", function(d, i) { console.log(d);});
   });
 });
 

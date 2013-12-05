@@ -1,9 +1,10 @@
+origin,destination,count
 University of Michigan,University of Michigan,47
 University of Michigan,University of Pennsylvania,11
 University of Michigan,New York University,1
 University of Michigan,Massachusetts Institute of Technology,14
 University of Pennsylvania,University of Michigan,3
-University of Pennsylvania,Rutgers, The State University of New Jersey,5
+University of Pennsylvania,"Rutgers, The State University of New Jersey",5
 University of Pennsylvania,University of Pennsylvania,128
 University of Pennsylvania,New York University,3
 University of Pennsylvania,Massachusetts Institute of Technology,1
@@ -13,15 +14,15 @@ Massachusetts Institute of Technology,University of Pennsylvania,2
 Massachusetts Institute of Technology,New York University,1
 Massachusetts Institute of Technology,Massachusetts Institute of Technology,50
 University of Maryland,University of Michigan,52
-University of Maryland,Rutgers, The State University of New Jersey,16
+University of Maryland,"Rutgers, The State University of New Jersey",16
 University of Maryland,University of Pennsylvania,17
 University of Maryland,New York University,4
 University of Maryland,Massachusetts Institute of Technology,71
-Rutgers, The State University of New Jersey,University of Michigan,17
-Rutgers, The State University of New Jersey,Rutgers, The State University of New Jersey,69
-Rutgers, The State University of New Jersey,University of Pennsylvania,14
-Rutgers, The State University of New Jersey,New York University,27
-Rutgers, The State University of New Jersey,Massachusetts Institute of Technology,16
+"Rutgers, The State University of New Jersey",University of Michigan,17
+"Rutgers, The State University of New Jersey","Rutgers, The State University of New Jersey",69
+"Rutgers, The State University of New Jersey",University of Pennsylvania,14
+"Rutgers, The State University of New Jersey",New York University,27
+"Rutgers, The State University of New Jersey",Massachusetts Institute of Technology,16
 Carnegie Mellon University,University of Michigan,2
 Carnegie Mellon University,University of Pennsylvania,43
 Carnegie Mellon University,New York University,9
