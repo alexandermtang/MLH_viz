@@ -13,6 +13,10 @@ Python Requirements:
 - [networkx](http://networkx.lanl.gov/index.html)
 - [matplotlib](http://matplotlib.org/)
 
+For Windows:
+
+We recommend you use a bundled python environment to run the code to make things simple. We recommend [WinPython](https://code.google.com/p/winpython/downloads/list)
+
 Usage 
 -----
 ###k-clique community visualization:
