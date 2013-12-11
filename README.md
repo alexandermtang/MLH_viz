@@ -15,6 +15,9 @@ Python Requirements:
 
 For Windows:
 
+For Linux/Mac:
+Simply pip install -r requirements.txt. Note: matplotlib does require some dependencies not provided by pip such as freetype2. Please install these before pip installing. If you have any problems installing these via pip, visit the sites above.
+
 We recommend you use a bundled python environment to run the code to make things simple. We recommend [WinPython](https://code.google.com/p/winpython/downloads/list)
 
 Usage 
