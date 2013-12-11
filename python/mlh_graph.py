@@ -1,4 +1,4 @@
-import csv, networkx
+import csv, networkx, os
 import matplotlib.pyplot as plt
 
 g = networkx.MultiDiGraph()
@@ -40,7 +40,7 @@ def avg_deg():
 	return sum(total.itervalues())/float(len(total))
 
 # Import MLH Data from CSV File
-with open ("../data/mlh.csv", "rb") as mlhfile:
+with open (os.path.join("..", "data" , "mlh.csv"), "rb") as mlhfile:
 	mlhreader = csv.reader(mlhfile, quoting=csv.QUOTE_ALL)
 	for row in mlhreader:
 		if row[1] != "0":
